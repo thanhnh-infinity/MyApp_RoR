@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   get "/messages" => "messages#index"
   get "messages/new" => "messages#new"  #Browser makes a HTTP GET request for the URL /messages/new =< maps URL to the Messages controller's new action
   post "messages" => "messages#create"
+
+  resources :signups
+  get 'signups/new' => "signups#new"
+  post 'signups/create' => "signups#create"
 end

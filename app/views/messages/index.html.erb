@@ -17,6 +17,13 @@
         <p class="time"><%= message.created_at %></p> 
     </div> 
     <% end %>
+    <!-- Used link_to to create a link to messages/new -->
     <%= link_to 'New Message', "messages/new" %>
+
+    <% @signups.each do |signup| %>
+    <div class="message">
+        <p class="content"><%= signup.email %></p> 
+    </div> 
+    <% end %>
   </div>
 </div>

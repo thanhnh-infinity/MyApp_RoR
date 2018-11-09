@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
         # index action retrieves all messages from the dabaase and stores them in variable @messages
         @messages = Message.all
         # @messages variable is passed on to the view
+        @signups = Signup.all
     end
 
     def new
