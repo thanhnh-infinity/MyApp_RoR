@@ -7,4 +7,9 @@ Rails.application.routes.draw do
 
   get "bolt_network/home" => "bolt_network#home"
   get "bolt_network/about" => "bolt_network#about"
+
+
+  get "/messages" => "messages#index"
+  get "messages/new" => "messages#new"  #Browser makes a HTTP GET request for the URL /messages/new =< maps URL to the Messages controller's new action
+  post "messages" => "messages#create"
 end

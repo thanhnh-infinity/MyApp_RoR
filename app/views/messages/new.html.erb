@@ -1,0 +1,23 @@
+<%= stylesheet_link_tag "messages" %>
+<div class="header">
+  <div class="container">
+    <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1m.svg">
+    <h1>Messenger</h1>
+  </div>
+</div>
+
+<div class="create">
+  <div class="container">
+    <!-- In the view, form_for creates a form with the fields of the @message -->
+    <%= form_for(@message) do |f| %>  
+        <div class="field"> 
+            <%= f.label :message %><br> 
+            <%= f.text_area :content %> 
+        </div> 
+        <div class="actions"> 
+            <!-- Redirect to Create action in Messages controller -->
+            <%= f.submit "Create" %> 
+        </div> 
+        <% end %>
+  </div>
+</div>

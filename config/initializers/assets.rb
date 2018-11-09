@@ -12,6 +12,7 @@ Rails.application.config.assets.precompile += %w( pages.css )
 Rails.application.config.assets.precompile += %w( bolt_network.css )
 Rails.application.config.assets.precompile += %w( bootstrap.min.css )
 Rails.application.config.assets.precompile += %w( css.css )
+Rails.application.config.assets.precompile += %w( messages.css )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
