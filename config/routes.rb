@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get "broadway" => "broadway#home"
 
+  get "bolt_network" => "bolt_network#home"
   get "bolt_network/home" => "bolt_network#home"
   get "bolt_network/about" => "bolt_network#about"
 
@@ -16,4 +17,14 @@ Rails.application.routes.draw do
   resources :signups
   get 'signups/new' => "signups#new"
   post 'signups/create' => "signups#create"
+
+  resources :posts
+  get 'posts' => 'posts#index'
+  post 'posts/create' => 'posts#create'
+
+  get "tags" => "tags#index"
+  get "tags/:id" => "tags#show", as: :tag
+
+  get "destinations/:id" => "destinations#show", as: :destination
+   
 end
