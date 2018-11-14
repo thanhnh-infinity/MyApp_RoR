@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag "bookmarks" %>
+<%= stylesheet_link_tag "merriweather" %>
+<%= stylesheet_link_tag "domine" %>
+<%= stylesheet_link_tag "bootstrap.min" %>
+
+<div class="title">
+  <h1>Bookmarks</h1>
+  </br>
+</div>
+
+<div class="book">
+     <p clas="title"><%= @book.title %></p>
+     <p clas="author"><%= @book.author %></p>
+     <p clas="publisher">(<%= @book.publisher %>)</p>
+     <p clas="description"><%= @book.description %></p>
+</div>
+
+<div class="reviews">
+    <% @reviews.each do |review| %>
+        <div class="review">
+          <p class="author"><%= review.author %>  </p>
+          <p class="comment"> <%= review.comment %> </p>
+        </div>
+    <% end %>
+</div>

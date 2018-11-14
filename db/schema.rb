@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_11_180727) do
+ActiveRecord::Schema.define(version: 2018_11_14_204536) do
+
+  create_table "books", force: :cascade do |t|
+    t.string "title"
+    t.string "author"
+    t.string "description"
+    t.string "publisher"
+    t.integer "weeks_on_list"
+    t.integer "rank_this_week"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "destinations", force: :cascade do |t|
     t.string "name"
@@ -32,6 +43,15 @@ ActiveRecord::Schema.define(version: 2018_11_11_180727) do
     t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "author"
+    t.string "comment"
+    t.integer "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_reviews_on_book_id"
   end
 
   create_table "signups", force: :cascade do |t|
