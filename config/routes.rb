@@ -36,5 +36,13 @@ Rails.application.routes.draw do
   # For Bookmarks application Books and reviews
   get "books" => "books#index"
   get "books/:id" => "books#show", as: :review
+
+
+  # For Application II : MoviesApp
+  get "movies" => "movies#index"
+  get "movies/:id" => "movies#show", as: :movie
+  get "actors" => "actors#index"
+  get "actors/:id" => "actors#show", as: :actor
+
    
 end
